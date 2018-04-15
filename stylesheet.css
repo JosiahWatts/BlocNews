@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*
+{
+  font-family: Roboto, sans-serif;
+}
+
+body
+{
+  background-color: #FAFAFA;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin-top: 0;
+  background-color: #FF5722;
+}
+header p {
+  padding: 10px;
+  font-size: 2em;
+  color: white;
+  font-weight: bold;
+}
+p {
+  margin: 0;
+}
+
+#content
+{
+  background-color: #FFFFFF;
+  margin: 20px;
+}
+.newsList
+{
+  padding: 20px;
+}
+.newsLink
+{
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+}
+.url
+{
+  font-size: .75em;
+  color: gray;
+}

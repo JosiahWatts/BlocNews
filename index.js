@@ -5,20 +5,19 @@ fetch(fetchURL)
   .then( r => {
     return r.json();
   })
-
   .then( data => {
     let articles = data.articles;
 
     let newsArticleList = document.createElement('ol');
-    let body = document.querySelector('body');
-    body.append(newsArticleList);
+    let content = document.querySelector('#content');
+    content.append(newsArticleList);
 
     articles.map( source => {
       let newsArticle = document.createElement('li');
-      newsArticle.innerHTML = '<a href="' + source.url + '">' + source.title + '</a> ' + '<span class="url">(' + makeSmallerUrl(source.url) + ')</span>';
+      newsArticle.className = "newsList";
+      newsArticle.innerHTML = '<a class="newsLink" target="_blank" href="' + source.url + '">' + source.title + '</a> ' + '<span class="url">(' + makeSmallerUrl(source.url) + ')</span>';
       newsArticleList.appendChild(newsArticle);
     });
-
   })
   .catch(e => {
     console.log('An error has occured: ${e}');
